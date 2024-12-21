@@ -8,16 +8,16 @@ from email import encoders
 from requests.exceptions import SSLError, RequestException
 
 # Set up your Google Custom Search API credentials
-api_key = 'AIzaSyC6br5zLu_Pc-AWjYSci9-BkCslLpQJGdM'
-cx = 'f4fdeeeadc50849b6'
+api_key = #enter your credentials
+cx = #enter your credentials
 gis = GoogleImagesSearch(api_key, cx)
 
 app = Flask(__name__)
-app.secret_key = '1bab65dff2dd6d51219a177ad77e1d6257efc2543aef410b'
+app.secret_key = #enter your credentials
 
 # Email credentials
-sender_email = "bhoomsie1@gmail.com"
-sender_password = "wpvt wwch ursi yzqi" # Replace this with an app-specific password
+sender_email = #enter your credentials
+sender_password = # enter an app-specific password
 
 # Directory to save downloaded images
 output_folder = "images"
