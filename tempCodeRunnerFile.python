@@ -1,5 +1,0 @@
-import os
-
-# Generate a secret key with 24 bytes
-secret_key = os.urandom(24)
-print("Your secret key:", secret_key.hex())
