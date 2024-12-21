@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Downloader</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            color: #333;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        form {
+            background: linear-gradient(135deg, #f0f0f0, #c2c2c2);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            border: 1px solid #d1d1d6;
+            transition: box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        label {
+            font-weight: 300;
+            color: #333;
+            font-size: 0.9em;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        input[type="email"],
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px;
+            font-size: 1em;
+            border: 1px solid #d1d1d6;
+            border-radius: 10px;
+            background: #f9f9f9;
+            color: #1c1c1e;
+            font-weight: 300;
+            transition: all 0.3s ease;
+        }
+
+        input[type="email"]:focus,
+        input[type="text"]:focus,
+        input[type="number"]:focus {
+            border-color: #007aff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 122, 255, 0.2);
+            background-color: #ffffff;
+        }
+
+        button[type="submit"] {
+            background: linear-gradient(135deg, #007aff, #0a84ff);
+            color: #ffffff;
+            border: none;
+            padding: 12px 0;
+            font-size: 1em;
+            font-weight: 300;
+            border-radius: 10px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        button[type="submit"]:hover {
+            background: linear-gradient(135deg, #005bb5, #0077e8);
+            transform: translateY(-2px);
+        }
+
+        button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+        /* Subtle Animations */
+        input[type="email"],
+        input[type="text"],
+        input[type="number"],
+        button[type="submit"] {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <form action="{{ url_for('download_images_route') }}" method="post">
+        <h1>Download Google Images</h1>
+        
+        <label for="recipient_email">Recipient Email:</label>
+        <input type="email" id="recipient_email" name="recipient_email" required>
+        
+        <label for="search_term">Search Term:</label>
+        <input type="text" id="search_term" name="search_term" required>
+        
+        <label for="num_images">Number of Images:</label>
+        <input type="number" id="num_images" name="num_images" required>
+        
+        <button type="submit">Download Images</button>
+    </form>
+</body>
+</html>
