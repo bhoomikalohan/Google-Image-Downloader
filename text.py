@@ -2,8 +2,8 @@ from google_images_search import GoogleImagesSearch
 import os
 
 # Set up your Google Custom Search API credentials
-api_key = 'AIzaSyC6br5zLu_Pc-AWjYSci9-BkCslLpQJGdM'  # Replace with your API key
-cx = 'f4fdeeeadc50849b6'     # Replace with your Search Engine ID
+api_key =  # Replace with your API key
+cx =    # Replace with your Search Engine ID
 
 # Create a GoogleImagesSearch object
 gis = GoogleImagesSearch(api_key, cx)
